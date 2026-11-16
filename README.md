@@ -44,3 +44,20 @@ Programming Language
 - Loops and Conditional Statements
 - Arrays
 - Basic Mathematical Operations
+
+
+
+
+
+## Code & Documentation Review Notes
+
+### 1. Source Code Analysis (`codes.c`)
+The implementation exhibits several structural and stylistic patterns commonly associated with LLM-generated code, alongside manual customization:
+* **Uniform Formatting & Scaffolding:** Consistent uppercase section headers (`// 1. PATTERN GENERATOR`, `// 2. PASCAL'S TRIANGLE`, etc.) and standardized `===` / `---` console banners.
+* **Upfront Variable Grouping:** All local variables across all four modules are declared in grouped blocks at the top of `main()` rather than scoped locally where used.
+* **Defensive Input Handling & Workarounds:** Uses buffer-safe width specifiers (`scanf(" %99[^\n]", word)`), in-place two-pointer whitespace removal, and manual ASCII offset math (`+ 32`) instead of standard library headers (`<ctype.h>`, `<string.h>`), paired with unprompted bounds checking on all inputs.
+* **Localized Customization:** Incorporates a Philippine grading scale (`1.00` to `5.00`) in the Grade Evaluator and duplicated triangle loops in the Christmas Tree pattern (`shape == 5`).
+
+### 2. Design Documentation (`ALGORITHMN AND PSEUDOCODE.pdf` & Flowchart)
+* **Commit Sequence:** Uploaded in a subsequent commit (`22ef0e9`) after `codes.c` was already present in the repository[cite: 1].
+* **Reverse-Engineered Structure:** The algorithm steps and pseudocode mirror the exact implementation details of `codes.c` (such as displaying `"PATTERN GENERATOR"` and explicitly printing three separate triangles for the Christmas Tree) rather than serving as an independent pre-coding design specification[cite: 1].
