@@ -19,7 +19,7 @@ int main()
     while (again == 'Y' || again == 'y')
     {
         printf("\n====================================\n");
-        printf("          IT101 FINAL PROJECT\n");
+        printf("          IT102 FINAL PROJECT\n");
         printf("====================================\n");
         printf("1. Pattern Generator\n");
         printf("2. Pascal's Triangle\n");
